@@ -1,4 +1,7 @@
 # SMC
+
+__Sequential Monte Carlo__
+
 So far only some basic examples of particle filters with an illustation using Stochastic Volatility (SV) model. Comparison of the accuracy and speed of the computations with the NAIS method of Koopman et al. (2015).
 
 ### References
