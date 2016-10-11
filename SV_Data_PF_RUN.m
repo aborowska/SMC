@@ -4,6 +4,7 @@ close all
 s = RandStream('mt19937ar','Seed',1);
 RandStream.setGlobalStream(s); 
 addpath(genpath('include/'));
+addpath(genpath('PF/'));
 
 model = 'sv';
 data_on = false;
@@ -72,7 +73,7 @@ for ss = 1:SS
     par_NAIS_init.b = zeros(T,1);
     par_NAIS_init.C = ones(T,1); 
 
-    EMitISEM_Control
+    cont = EMitISEM_Control(model);
     cont_NAIS = cont.nais;
     clear cont
     % kernel = @(a) posterior_sv(y, a, par_NAIS_init, prior_const, cont.nais);
